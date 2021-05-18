@@ -53,7 +53,7 @@ function handleClick() {
     if(rName == idOfClicked) {
 
     console.log('clickPic --> Success!');
-    window.alert('Correct!');
+    window.alert('Correct - Let\s play again!');
     //run program again to generate another name prompt
     location.reload();
 
