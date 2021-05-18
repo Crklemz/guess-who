@@ -29,15 +29,20 @@ function randomNumber(min, max){
 }
 
 let rName = '';
+let rEmployee = '';
 
 function randomName() {
-  rname = $('.nameClick').text(`Click On: ${people[randomNumber(1, 10)].name}`).data('name');
+
+    rEmployee = people[randomNumber(1, 10)];
+    console.log(rEmployee);
+    
+    $('.nameClick').append(`<div class="rando">${rEmployee.name}</div>`);
     
 }
 
 function handleClick() {
     let idOfClicked = $(this).data('name');
- 
+    rName = rEmployee.name;
     console.log(idOfClicked);
     console.log(rName);
     
