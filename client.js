@@ -28,7 +28,7 @@ function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
 
-let rName = '';
+
 let rEmployee = '';
 
 function randomName() {
@@ -42,15 +42,15 @@ function randomName() {
 
 function handleClick() {
     let idOfClicked = $(this).data('name');
-    rName = rEmployee.name;
+
     console.log(idOfClicked);
-    console.log(rName);
+
     
     
     //determine name of photo clicked
     //test name clicked against the prompted name
 
-    if(rName == idOfClicked) {
+    if(rEmployee.name == idOfClicked) {
 
     console.log('clickPic --> Success!');
     window.alert('Correct - Let\s play again!');
