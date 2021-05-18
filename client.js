@@ -31,7 +31,7 @@ function randomNumber(min, max){
 let rName = '';
 
 function randomName() {
-  rname = $('.nameClick').text(`Click On: ${people[randomNumber(1, 10)].name}`);
+  rname = $('.nameClick').text(`Click On: ${people[randomNumber(1, 10)].name}`).data('name');
     
 }
 
@@ -43,18 +43,21 @@ function handleClick() {
     
     
     //determine name of photo clicked
+    //test name clicked against the prompted name
+
     if(rName == idOfClicked) {
 
     console.log('clickPic --> Success!');
-    $(this).append('Success!');
+    window.alert('Correct!');
+    //run program again to generate another name prompt
+    location.reload();
 
     } else {
+
         console.log('clickPic --> Wrong!');
-        $(this).append('Wrong!');
-    }
-    //test name clicked against the prompted name
+        window.alert('Wrong - try again!');
 
+    }//end if else
 
-    //run program again to generate another name prompt
-}
+}//end handleClick
 
